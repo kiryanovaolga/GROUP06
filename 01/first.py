@@ -11,4 +11,4 @@ except:
     print("Neplatná hodnota")
 
 
-
+# TODO: make new function
