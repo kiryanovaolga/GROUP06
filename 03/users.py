@@ -35,7 +35,7 @@ def login(username, password):
     except (KeyError, AssertionError):
         return False
 
-def change_password(old_password, password, password_repeat):
+def change_password(username, old_password, password, password_repeat):
     pass
 
 def delete_user(username, password):
@@ -55,3 +55,4 @@ def delete_user(username, password):
 print(login('hello', 'Python'))
 print(login('test', 'heslo'))
 delete_user('test', 'hesloaaaaaaaaaa')
+change_password('test', 'heslo', 'new_pass', 'new_pass')
