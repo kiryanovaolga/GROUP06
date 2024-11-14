@@ -28,12 +28,30 @@ def register(username, password, password_repeat):
     write_data(data)
 
 def login(username, password):
-    pass
-
-def logout(username):
-    pass
+    data = read_data()
+    try:
+        assert data[username] == password, 'Chybné heslo'
+        return True
+    except (KeyError, AssertionError):
+        return False
 
 def change_password(old_password, password, password_repeat):
     pass
 
-register('test123', 'heslo', 'heslo')
+def delete_user(username, password):
+    """
+    1. načteme json 
+    2. najdeme ho pokud ho najdeme
+    3. smažeme
+    4. uložíme json
+    """
+    data = read_data()
+    if username in data and data[username] == password:
+        del data[username]
+        write_data(data)
+
+#register('test123', 'heslo', 'heslo')
+
+print(login('hello', 'Python'))
+print(login('test', 'heslo'))
+delete_user('test', 'hesloaaaaaaaaaa')
