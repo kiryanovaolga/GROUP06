@@ -1,8 +1,13 @@
 # users.py
 
-import os, json
+import os, json, hashlib
 
 DATA_PATH = '03/users.json'
+
+def hash_password(password):
+    # hashlib.sha256(password.encode()).hexdigest()
+    hash_value = hashlib.sha256(password.encode())
+    return hash_value.hexdigest()
 
 def read_data():
     with open(DATA_PATH, encoding='utf-8') as file:
@@ -24,13 +29,13 @@ def register(username, password, password_repeat):
     check_password(password, password_repeat)
     data = read_data()
     check_username(data, username)
-    data[username] = password
+    data[username] = hash_password(password)
     write_data(data)
 
 def login(username, password):
     data = read_data()
     try:
-        assert data[username] == password, 'Chybné heslo'
+        assert data[username] == hash_password(password), 'Chybné heslo'
         return True
     except (KeyError, AssertionError):
         return False
@@ -46,13 +51,19 @@ def delete_user(username, password):
     4. uložíme json
     """
     data = read_data()
-    if username in data and data[username] == password:
+    if username in data and data[username] == hash_password(password):
         del data[username]
         write_data(data)
 
-#register('test123', 'heslo', 'heslo')
 
-print(login('hello', 'Python'))
-print(login('test', 'heslo'))
-delete_user('test', 'hesloaaaaaaaaaa')
-change_password('test', 'heslo', 'new_pass', 'new_pass')
+def test():
+    #register('test123', 'heslo', 'heslo')
+    print(login('hello', 'Python'))
+    print(login('test', 'heslo'))
+    delete_user('test', 'hesloaaaaaaaaaa')
+    change_password('test', 'heslo', 'new_pass', 'new_pass')
+
+def test2():
+    register('test123', 'heslo', 'heslo')
+
+# test2()
