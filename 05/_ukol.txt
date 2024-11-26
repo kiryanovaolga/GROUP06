@@ -1,4 +1,4 @@
-vytvořte soubor 05_dates.txt
+vytvořte soubor 05_dates.py
 
 v něm vyprintuje všechny první dny v měsíci ve formátu:
 DD/MM/YYYY

@@ -1,0 +1,31 @@
+- ve čtvrtek je prezentace/obhajoba s Jakubem
+- Domácí úkoly (append, první den v měsíci)
+
+- opakování
+    1. jaké datové typy
+    str, bool, int, float, None
+
+    2. jaké datové struktury
+    list, dict, tuple, set
+
+    3. syntaxe podmínky
+    if podminka:
+        cinnost 1
+    else:
+        cinnost 2
+
+    4. syntaxe for cyklu
+    for item in data:
+        cinnost
+
+    5. jak definuji funkci
+        (napsat syntaxi)
+    
+    def nazev(par1, par2):
+        cinnost x
+        return 
+
+
+
+- pokračovat s json svátky
+
