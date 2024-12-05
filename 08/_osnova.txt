@@ -1,0 +1,6 @@
+regulání výrazy
++ web scraping
+- uložení dat
+- uložení a stažení img linků
+
+https://mobil.bazos.cz/
