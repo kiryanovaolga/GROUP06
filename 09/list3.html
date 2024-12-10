@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <style>
         div {
+            --columns: 1;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(var(--columns), 1fr);
             gap: 2em;
         }
-
+        
+        @media screen and (min-width: 576px) { div { --columns: 2; } }
+        @media screen and (min-width: 768px) { div { --columns: 3; } }
+        @media screen and (min-width: 1024px) { div { --columns: 4; } }
+        @media screen and (min-width: 1280px) { div { --columns: 5; } }
+        
         div > a {
             background: var(--pico-muted-border-color);
             border-radius: 1em;
@@ -19,7 +25,7 @@
         }
 
         div > a > h2 {
-            font-size: 1.25em;
+            font-size: 1em;
             margin: .5em 1em;
         }
 

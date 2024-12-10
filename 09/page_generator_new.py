@@ -5,6 +5,7 @@ nová upravená verze - každá fukce dělá jednu věc
 
 import json
 
+
 def read_json_data():
     with open('08/data.json', encoding='utf-8') as file:
         return json.load(file)
