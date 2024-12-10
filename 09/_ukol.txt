@@ -1,0 +1,13 @@
+1. upravte si page_generator.py
+- konkrétně html, tak aby se vám líbilo (css)
+- odevzdejte jako: 09_list.html
+
+2. vyzkoušejte si list/dict/set comprehension
+- z níže uvedených odkazů udělejte libovolná cvičení
+- odevzdejte jako 09_comprehension.py
+
+List a Dict comprehension zde:
+https://www.learnbyexample.org/python-list-comprehension/
+https://www.learnbyexample.org/python-dictionary-comprehension/
+
+3. dodělejte úkoly, které vám chybí
