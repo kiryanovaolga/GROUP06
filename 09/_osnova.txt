@@ -1,0 +1,10 @@
+# 1. domací ukoly
+
+tipy:
+- list comprehension
+- řazení podle klíče
+- meření rychlosti kodu
+- 
+
+vytvoření něčeho užitečného z dat
+
