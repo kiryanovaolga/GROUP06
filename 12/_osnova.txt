@@ -1,0 +1,23 @@
+Další třídy:
+
+třídy v Pythonu: list, dict, set vše je OOP
+
+
+třídy z modulů:
+- datetime, re, collections, unittest
+- requests, Pillow
+
+
+cvičení:
+GPS Souřadnice
+latitude, longitude
+50.272828 12.8238278
+50 27' 28"  12.8238278
+google_map_url
+
+
+Implementace Morseovy abecedy
+https://cs.wikipedia.org/wiki/Morseova_abeceda
+https://github.com/suche-cz/data/
+- co by tam mělo být a co ne?
+

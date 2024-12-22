@@ -1,0 +1,14 @@
+Za domácí úkol dodělejte:
+
+morse_abc.py
+
+implementujte metody
+encode (zakóduj)
+decode (dekóduj)
+
+je tam pro vás zakódovaná zpráva :)
+
+
+zdroje pro zopakování základů OOP
+https://www.learnbyexample.org/python-classes-and-objects/
+https://www.freecodecamp.org/news/how-to-use-oop-in-python/

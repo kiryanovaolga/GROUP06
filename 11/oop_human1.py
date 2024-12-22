@@ -2,6 +2,7 @@
 
 # třída vs instance
 
+
 class Human:
     def __init__(self, name, age, best_friend=None):
         print("Create Human")
