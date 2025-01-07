@@ -1,0 +1,17 @@
+vymyslete 3 vztahy, kde je kompozice
+a jeden vztah namodelujte (viz zdrojáky z hodiny)
+
+např: (vymyslete vlastní příklady)
+škola - ředitel (1 škola má 1 ředitele)
+auto - kolo (1 auto má 4 kola)
+stat - města (1 stát má více měst)
+
+
+vymyslete 3 vztahy, kde je dedičnost
+a jeden vztah namodelujte (viz zdrojáky z hodiny)
+
+např: (vymyslete vlastní příklady)
+auto (parent) - závodní auto (child)
+soubor (parent) - mp3 soubor (child)
+tekutina (parent) - voda (child)
+
