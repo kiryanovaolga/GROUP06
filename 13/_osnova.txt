@@ -1,0 +1,23 @@
+OOP - opakování
+
+jana = ['Jana', 24, 'Praha']
+jana = {'name': 'Jana', 'age': 24, 'town': 'Praha'}
+
+class Student:
+    def __init__(self, name, age, town):
+        self.name = name
+        self.age = age
+        self.town = town # town by mohl být vlastní instance -> kompozice
+
+jana = Student('Jana', 24, 'Praha')
+
+
+# -> dědičnost -> zaměstnanec
+
+
+OOP
+- kompozice
+- polymorfizmus
+- zapouzdřední
+- dědičnost
+

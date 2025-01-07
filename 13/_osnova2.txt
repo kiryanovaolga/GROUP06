@@ -1,0 +1,39 @@
+oop
+
+bankovní účet
+vlastník
+adresa
+ulice
+mesto
+castka
+vklad, výběr ...
+
+https://www.learnbyexample.org/python-classes-and-objects/
+https://realpython.com/python3-object-oriented-programming/
+
+
+4 techniky OOP (obecné koncepty)
+1) Kompozice (Composition) - reference na další objekty, přístpu přes tečkovou notaci
+2) Zapouzdření (Encapsulation) - 
+3) Polymorfismus - jedna věc se chová různými způsoby podle toho co tam vstupuje
+len('asads')
+len([1,2,3])
+
+4) Dědičnost (Inheritance) - 
+    jak poznat dědičnost:
+        1) prvek X (child) je speciální případem prvku Y (parent)
+        2) prvek X (child) dokáže 100% nahradit prvek Y (parent)
+
+class Zamestnanec:
+    """ parent """
+
+    def uklidit():
+        pass
+
+class Kuchar(Zamestnanec):
+    """ child """
+
+    def uvarit():
+        pass
+
+oop unit test

@@ -1,6 +1,7 @@
 vytvořte soubor 11_bank_account.py
 
 v něm třídu BankAccount, který reprezentuje bankovní účet
+
 třída bude mít attributy
 - číslo účtu (str nebo int)
 - majitel (stačí jako str)
