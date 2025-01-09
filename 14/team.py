@@ -12,18 +12,28 @@ class Team:
         self.company = company
         self.members = set()
     
+    def __str__(self):
+        return self.name
+    
     def add_member(self, employee: 'Employee'):
         employee.set_team(self)
-        self.members.add(employee)
+        self.members.add(employee) # 
 
     def remove_member(self, employee: 'Employee'):
         self.members.remove(employee)
 
-
 class Employee:
-    def __init__(self, name: str, team: Team = None):
+    def __init__(self, name: str):
         self.name = name
-        self.team = team
+        self.team = None
+    
+    def __str__(self):
+        """ string reprezentace, která použije pro tisk nebo pro převod na str """
+        return self.name
+
+    def __repr__(self):
+        """ string reprezentace slouží pro reprodukci stejného prvku """
+        return f"Employee('{self.name}')"
     
     def set_team(self, new_team):
         if self.team:
@@ -37,34 +47,25 @@ class Employee:
 
 
 it_security = Company('IT Guards s.r.o.')
+
 team_A = Team('Team A', it_security)
 team_B = Team('Team B', it_security)
-team_B.add_member()
 
+lena = Employee('Lena')
+petr = Employee('Petr')
 
-l1 = Employee('Lena')
-l2 = Employee('Lena')
-l3 = Employee('Lena 2')
+print(petr.team)
+print(team_A.members)
 
-team_B.add_member(l1)
-team_B.add_member(l2)
-team_B.add_member(l3)
+team_A.add_member(petr)
+print(petr.team)
+print(team_A.members)
+
+team_A.add_member(lena)
+print(lena.team)
+print(team_A.members)
+
+team_B.add_member(lena)
+print(lena.team)
+print(team_A.members)
 print(team_B.members)
-
-kuba = Employee('Kuba', team_A)
-jana = Employee('Jana')
-
-print(kuba.name)
-print(kuba.team.name)
-print(kuba.team.company.name)
-# print(jana.team.company.name)
-
-
-it_security.name = 'IT Gurus 222'
-print(team_A.company.name)
-print(team_B.company.name)
-
-
-it_security2 = Company('IT 2 Guards s.r.o.')
-
-
