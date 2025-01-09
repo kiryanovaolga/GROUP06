@@ -45,27 +45,29 @@ class Employee:
 # Udělejte třídu Employee
 # atributy: name, team
 
+print(__name__, '<<<<<<<<<<<<<<<<<<<<<<<<<<<')
 
-it_security = Company('IT Guards s.r.o.')
+if __name__ == '__main__':
+    it_security = Company('IT Guards s.r.o.')
 
-team_A = Team('Team A', it_security)
-team_B = Team('Team B', it_security)
+    team_A = Team('Team A', it_security)
+    team_B = Team('Team B', it_security)
 
-lena = Employee('Lena')
-petr = Employee('Petr')
+    lena = Employee('Lena')
+    petr = Employee('Petr')
 
-print(petr.team)
-print(team_A.members)
+    print(petr.team)
+    print(team_A.members)
 
-team_A.add_member(petr)
-print(petr.team)
-print(team_A.members)
+    team_A.add_member(petr)
+    print(petr.team)
+    print(team_A.members)
 
-team_A.add_member(lena)
-print(lena.team)
-print(team_A.members)
+    team_A.add_member(lena)
+    print(lena.team)
+    print(team_A.members)
 
-team_B.add_member(lena)
-print(lena.team)
-print(team_A.members)
-print(team_B.members)
+    team_B.add_member(lena)
+    print(lena.team)
+    print(team_A.members)
+    print(team_B.members)
