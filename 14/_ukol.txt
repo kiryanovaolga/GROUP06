@@ -1,0 +1,20 @@
+Vymyslete třídy pro eshop, kde chcete evidovat:
+
+produkty, značky
+kategorie produktu
+
+1 produkt může být pouze v jedné kateogii
+vymslete o tříd jejich atributy a vztahy
+zamyslete se zda atribut bude pouze informace nebo to bude odkaz na další objekt
+
+např:
+cena může bát pouze int,
+nebo to může být odkaz na instanci Ceny
+záleží jakou úroveň abstrakce zvolíte, snažte se to udělat co nejjednodušeji
+
+
+Kategorie mohou být: oblečení, drogerie, hračky, elektronika
+Produkty: Mikina značky Adidas, Body Nike, Lego Autíčko, Sony Sluchátka ...
+
+_ukol.PNG - příklad toho jak si můžeme představit produkt
+odevzdejte jako 14_eshop_oop.py
