@@ -8,7 +8,7 @@ vymslete o tříd jejich atributy a vztahy
 zamyslete se zda atribut bude pouze informace nebo to bude odkaz na další objekt
 
 např:
-cena může bát pouze int,
+cena může být pouze int
 nebo to může být odkaz na instanci Ceny
 záleží jakou úroveň abstrakce zvolíte, snažte se to udělat co nejjednodušeji
 

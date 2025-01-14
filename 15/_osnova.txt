@@ -1,0 +1,9 @@
+OOP ostatní:
+- identifikační funkce (id, vars, dirs)
+- magické metody
+- metody a atributy podle toho kde leží (instanční, třídní, statickés)
+
+Testování
+- ==
+- assert
+- unittest
