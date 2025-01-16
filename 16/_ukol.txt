@@ -1,0 +1,13 @@
+Vytvořte simulaci nákupního košíku:
+
+chceme vytvořit nakupní košík pro eshop
+do kterého můžeme přidávat zboží
+
+koším by měl umět:
+- přidat zboží
+- odebrat zboží
+- vypočítat celkovou sumu
+
+Ostatní implementaci a návh nechám na vás
+
+soubor pojmenujte 16_kosik.py
