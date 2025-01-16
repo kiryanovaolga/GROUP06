@@ -1,0 +1,60 @@
+*args, **kwargs
+
+jen teoreticky:
+    Queue (Fronta) - FIFO
+    Stack (Zásobník) - LIFO
+
+
+
+FileCounter
+- class variable: extension, types ?
+
+- count of extensions
+- count of types
+- size
+- largest, smallest (by type?)
+- newest, oldest (by type?)
+
+TodoList
+- TodoItem
+- title, text, create_dt
+- status (active, done)
+
+instance, class, static ???
+
+
+
+
+Todo List
+
+1. [✔] Udělat ukoly
+2. [ ] Uklidit
+3. [✔] Uklidit
+4. [ ] Uklidit
+5. [ ] Uklidit
+6. [ ] Uklidit
+
+--------------------------------------------------
+
+a) jaké objekty tam budou
+b) jaké činnosti tam budou
+
+TaskList
+atributy
+- name: str
+- tasks: dict[int, Task]
+metody
+- add_task(task: Task)
+- remove_task(task: Task)
+
+Task
+atributy
+- id: int
+- name: str
+- status: bool
+- priority: int
+- created_dt: datetime.now()
+- [due_dt]: datetime
+metody
+- change_status()
+
