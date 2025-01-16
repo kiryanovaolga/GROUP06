@@ -44,28 +44,42 @@ class TaskList:
     def remove_task(self, task: Task):
         return self.remove_task_by_id(task.id)
 
-    def remove_task_by_id(self, _id: int):
+    def remove_task_by_id(self, task_id: int):
         try:
-            removed_task = self.tasks.pop(_id)
+            removed_task = self.tasks.pop(task_id)
             return removed_task
         except KeyError:
             return None
+    
+    def finish_task_by_id(self, task_id: int):
+        """
+        dokončete tuto metodu
+        1. pomocí task_id získáme instanci Task
+        - ze self.tasks
+        2. zavoláme na něm metodu finish()
+        """
+        task: Task = self.tasks[task_id]
+        task.finish()
+    
+    def undo_task_by_id(self, task_id):
+        pass
     
     def show(self):
         for task in self.tasks.values():
             print(task)
 
-
-task1 = Task('Ukol 1')
-task2 = Task("Ukoly 2")
-task3 = SuperTask("Ukoly 3", priority=10, due_dt=dt.datetime(2025, 1, 31))
-task2.finish()
-task3.finish()
-
-task1.finish()
+"""
 task_list = TaskList('Pracovní úkoly')
-task_list.add_task(task1)
+task_list.add_task(Task('Dát si káfe'))
 task_list.add_task(Task('Napsat testy'))
 task_list.add_task(Task('Zkontrolovat SQL příkazy'))
 
+task_list.finish_task_by_id(3)
+task_list.finish_task_by_id(2)
+
 task_list.show()
+
+task_list.undo_task_by_id(2)
+
+task_list.show()
+"""
