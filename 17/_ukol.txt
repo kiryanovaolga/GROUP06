@@ -13,3 +13,8 @@ instrukce jsou v
 myapp/views.py řádek 20
 _project/urls.py řádek 27
 
+
+PS:
+1) otevřít si projekt ve VS Code
+2) nezapomeňte si spustit server pomocí
+python manage.py runserver
