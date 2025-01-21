@@ -15,3 +15,8 @@ def index_page(request):
                         <img src="https://picsum.photos/200/300">
                         ''')
 
+
+"""
+úkol: vytvořte zde view s názvem time_page
+pamatujte: na vstupu musí být request a na výstupu HttpResponse
+"""

@@ -24,5 +24,6 @@ from myapp.views import index_page
 
 urlpatterns = [
     path('', index_page),
+    # path('time/', ), # zde přidejte time_page
     path('admin/', admin.site.urls),
 ]
