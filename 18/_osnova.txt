@@ -1,0 +1,29 @@
+obrázky ve figmě
+
+Formuláře:
+- ukázka webu
+- práce s GET parametry
+- práce s POST daty
+
+praktická část:
+- práce s cestami
+
+
+URL
+https://www.domain.com:443/path/path/?param=value&param=value
+
+http://www.domain.com:80/path/path/?param=value&param=value
+
+DNS
+domain.com -> 104.18.42.197
+localhost -> 127.0.0.1
+
+ping domain.com
+Reply from 104.18.42.197: bytes=32 time=3ms TTL=54
+
+ping pythonanywhere.com
+ping eu.pythonanywhere.com
+
+ping 8.8.8.8
+
+tracert

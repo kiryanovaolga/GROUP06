@@ -16,14 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import index_page
+from myapp import views
 
 # 127.0.0.1:8000/
 # 127.0.0.1:8000/admin/
 
 
 urlpatterns = [
-    path('', index_page),
+    path('', views.index_page),
     # path('time/', ), # zde přidejte time_page
+
+    # http://127.0.0.1:8000/url-paths/
+    path('url-paths/', views.url_paths),
+
     path('admin/', admin.site.urls),
 ]

@@ -16,6 +16,10 @@ def index_page(request):
                         ''')
 
 
+def url_paths(request):
+
+    return HttpResponse('This page is working')
+
 """
 úkol: vytvořte zde view s názvem time_page
 pamatujte: na vstupu musí být request a na výstupu HttpResponse

@@ -1,0 +1,15 @@
+
+# kdekoliv ve složce
+python -m django startproject nazev_projektu
+django-admin startproject nazev_projektu
+
+# pokud již máte vytvořenou složku projektu (doporučuji)
+python -m django startproject _project .
+
+# ve složce projektu
+python manage.py runserver
+python manage.py startapp nazev_ap
+
+python manage.py startapp makemigrations
+python manage.py startapp migrate
+python manage.py startapp createsuperuser
