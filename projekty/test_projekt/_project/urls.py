@@ -29,7 +29,11 @@ urlpatterns = [
     # http://127.0.0.1:8000/url-paths/
     path('url-paths/', views.url_paths),
 
-    path('my-math/', views.my_math),
+    path('calculate/', views.my_math),
+
+    path('calculator/', views.calculator),
+
+    path('test-template/', views.test_template),
 
     path('admin/', admin.site.urls),
 ]

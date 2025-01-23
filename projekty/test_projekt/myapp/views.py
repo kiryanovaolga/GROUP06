@@ -44,6 +44,55 @@ def my_math(request):
 
     return HttpResponse(f'RESULT: {result}')
 
+
+# MVC - model view controller (ovladač)
+# MVT - model view (pohled) - template (HTML šablona)
+
+
+"""
+try:
+    name = request.GET['name']
+except KeyError:
+    name = 'World'
+
+if 'name' in request.GET:
+    name = request.GET['name']
+else:
+    name = 'World'
+"""
+
+def test_template(request):
+    print(request.GET)
+    name = request.GET.get('name', 'World')
+    age = request.GET.get('age', 0)
+    # záskejte klíč age, pokud age není tak doplňte 0
+
+    age = int(age) if age.isdecimal() else 0
+
+    context = {
+        'date': dt.datetime.now(),
+        'name': name,
+        'age': age,
+    }
+    # render = vykreslit
+    return render(request, 'test_template.html', context)
+
+# dodělat select pro operace a post form
+def calculator(request):
+    try:    
+        a = int(request.GET['a'])
+        b = int(request.GET['b'])
+        result = a + b
+    except (KeyError, TypeError, ValueError):
+        result = ''
+
+    context = {
+        'result': result
+    }
+
+    return render(request, 'calculator.html', context)
+
+
 """
 úkol: vytvořte zde view s názvem time_page
 pamatujte: na vstupu musí být request a na výstupu HttpResponse
