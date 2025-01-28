@@ -1,0 +1,21 @@
+za domácí úkol udělejte formulář a stránku pro registraci
+na cestě: /signup/
+
+budou tam vstupní políčka pro
+
+email (nastavte input na type="email")
+heslo
+heslo_repeat
+
+na straně html nastavte formulář tak by se správně validoval
+na straně view využijte
+    try-except
+nebo
+    .get() a pak kontrolu na zadané hodnoty
+
+ve view pokud hesla budou stejná tak vrátíme stránku
+'signup_success.html' - kde bude text Success Registration
+
+pokud nebudou vrátíme stránku 
+'signup_failed.html' - kde bude text Success Failed
+

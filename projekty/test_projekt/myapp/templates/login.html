@@ -20,10 +20,13 @@
       <!-- relativní -->
       <!--/login/-->
 
-      <form method="post" action="/login/">
+      <!-- enctype="multipart/form-data" používám pokud potřebuji posílat soubory -->
+      <form method="post" action="/login/" enctype="multipart/form-data">
         {% csrf_token %}
         <input name="username" required>
         <input type="password" name="password" required>
+        <input type="file" name="myfile">
+        <h2>Zadejte platné přihlašovací údaje</h2>
         <button type="submit">Příhlásit se</button>
       </form>
     </main>

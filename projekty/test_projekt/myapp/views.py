@@ -92,6 +92,8 @@ def calculator(request):
             result = a * b
         elif operation == 'divide':
             result = a / b
+        else:
+            result = ''
 
     except (KeyError, TypeError, ValueError):
         result = ''
@@ -115,4 +117,19 @@ pamatujte: na vstupu musí být request a na výstupu HttpResponse
 
 
 def login(request):
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+
+    # print(request._body) # privatní 
+    print(request.FILES, '<<< FILES')
+    print(request.POST)
+    print(username, password)
+
+    if username == 'suche' and password == 'heslo':
+        return render(request, 'login_success.html')
+
     return render(request, 'login.html')
+
+
+def my_page(request, name):
+    return render(request, 'my_page.html', {'name': name})

@@ -6,6 +6,7 @@ Files
 enctype="multipart/form-data"
 
 application/x-www-form-urlencoded (default)
+
 multipart/form-data (spec points to RFC7578)
 
 text/plain.
