@@ -79,11 +79,23 @@ def test_template(request):
 
 # dodělat select pro operace a post form
 def calculator(request):
-    try:    
+    try:
+        operation = request.GET['operation']
         a = int(request.GET['a'])
         b = int(request.GET['b'])
-        result = a + b
+        
+        if operation == 'plus':
+            result = a + b
+        elif operation == 'minus':
+            result = a - b
+        elif operation == 'multiple':
+            result = a * b
+        elif operation == 'divide':
+            result = a / b
+
     except (KeyError, TypeError, ValueError):
+        result = ''
+    except ZeroDivisionError:
         result = ''
 
     context = {
@@ -97,3 +109,10 @@ def calculator(request):
 úkol: vytvořte zde view s názvem time_page
 pamatujte: na vstupu musí být request a na výstupu HttpResponse
 """
+
+# view = python funkce, která vrací HttpResponse
+# view = slangově "vjůčko"
+
+
+def login(request):
+    return render(request, 'login.html')

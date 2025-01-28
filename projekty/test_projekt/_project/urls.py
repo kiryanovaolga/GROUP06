@@ -33,6 +33,9 @@ urlpatterns = [
 
     path('calculator/', views.calculator),
 
+    # http://127.0.0.1:8000/login/
+    path('login/', views.login),
+
     path('test-template/', views.test_template),
 
     path('admin/', admin.site.urls),

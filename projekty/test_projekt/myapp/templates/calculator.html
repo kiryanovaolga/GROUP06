@@ -16,9 +16,20 @@
         
         <form action="/calculator/" method="get">
             <!-- přes GET.a získáme klíč a z GET -->
+            
+            <select name="operation">
+              <option value="plus">+</option>
+              <option value="minus">-</option>
+              <option value="multiple">&times;</option>
+              <option value="divide">/</option>
+            </select>
+
+            <!--http://127.0.0.1:8000/calculator/?operation=divide&a=10&b=20-->
+
             <input name="a" required type="number" value="{{ request.GET.a }}">
             <input name="b" required type="number" value="{{ request.GET.b }}">
-            <input value="{{ result }}" readonly>
+            <label for="result">{{ request.GET.a }} {{ request.GET.operation }} {{ request.GET.b }} = </label>
+            <input id="result" value="{{ result }}" readonly>
             <button type="submit">Calculate</button>
             <a href="/calculator/">Reset</a>
         </form>

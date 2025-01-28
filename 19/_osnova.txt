@@ -1,0 +1,20 @@
+Dodělání select -> operace
+
+Post data
+
+Files 
+enctype="multipart/form-data"
+
+application/x-www-form-urlencoded (default)
+multipart/form-data (spec points to RFC7578)
+
+text/plain.
+This is "not reliably interpretable by computer",
+so it should never be used in production, and we will not look further into it.
+
+Práce s cestami a parametry
+
+Práce s formuláři (include, extends)
+
+Kam ukládat data?
+
