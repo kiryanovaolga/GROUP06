@@ -1,63 +1,8 @@
-"""
-URL configuration for _project project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
-from myapp import views
-
-# 127.0.0.1:8000/
-# 127.0.0.1:8000/admin/
+from django.urls import path, include
 
 
 urlpatterns = [
-    path('', views.index_page),
-    # path('time/', ), # zde přidejte time_page
-
-    # http://127.0.0.1:8000/url-paths/
-    path('url-paths/', views.url_paths),
-
-    path('calculate/', views.my_math),
-
-    path('calculator/', views.calculator),
-
-    # path('jmeno/jana/', views.my_page),
-    # path('jmeno/petr/', views.my_page),
-    # path('jmeno/karel/', views.my_page),
-    
-    # jmeno/ales/
-    # instagram.com/suche.cz/
-    # instagram.com/uzivatel/
-    # zpravy.cz/clanky/top-mista-na-bydleni-109282/
-    # zpravy.cz/clanky/top-mista-na-sport-28273/
-    # slug 'Top místa na bydlení' -> 'top-mista-na-bydleni'
-
-    # toto udělá validaci pro /clanky/<slug>-<id>/
-    # máme vzor
-    # zpravy.cz/clanky/top-mista-na-bydleni-109282/
-
-    # toto udělá validaci pouze pro /clanky/
-    # zpravy.cz/clanky/?id=109282
-    
-    path('jmeno/<str:name>/', views.my_page),
-    # todo: ukazat url cesty pomocí regex
-
-    # http://127.0.0.1:8000/login/
-    path('login/', views.login),
-
-    path('test-template/', views.test_template),
-
+    # path('test/', include('myapp.urls')),
     path('admin/', admin.site.urls),
 ]

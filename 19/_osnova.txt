@@ -15,7 +15,7 @@ so it should never be used in production, and we will not look further into it.
 
 Práce s cestami a parametry
 
-Práce s formuláři (include, extends)
+Práce s templaty (include, extends)
 
 Kam ukládat data?
 

@@ -1,0 +1,49 @@
+
+/cesta/Karel/
+/cesta/?jmeno=
+
+
+0. pokrařovat s cestami
+
+1. definice cest pomocí path udělá validaci
+přes querystring parametry musíme validovat uvnitř view
+
+
+2. ukazat moduly -> rozdělení kód na menší kousky
+
+3. Práce s templates (include, extends)
+
+4. jak ukládat data - na straně serveru?
+a) do mezipaměti (dočasná paměť)? 
+    + rychlé, životnost dat (není trvalá), jednoduchá implementace
+    - velikost paměti, není travalá paměť
+
+b) do souboru ?
+    + ukladáme hard disk, neřešíme operační paměť, trvalá data
+    +/- můžeme si určit strukturu (kompatibilita)
+    - omezení na počet souborů, i velikost
+    - input/output (I/O) operace mohou pomalé pro velké množství souborů
+
+    2_000_000_000 - 200_000_000 * 10 * 365
+
+c) do databáze ?
+    významy:
+    a) HW
+    b) SW - databázovy engine 
+    Sun System - Oracle
+            MySQL
+    
+    MariaDb
+    PostgresSql
+    MSSQL Sever - 
+
+    c) data - 
+
+    (excel, sousta data, )
+    + software, data
+
+    + funguje nezávisle
+    + trvalá data, strukturovaná, input/output (I/O)
+    + omezené velikostí disku
+    + optimalizovaná db: rychlá, efektivní, dobrá struktura
+    - složitější struktura

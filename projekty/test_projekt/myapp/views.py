@@ -133,3 +133,27 @@ def login(request):
 
 def my_page(request, name):
     return render(request, 'my_page.html', {'name': name})
+
+
+def article(request, name, number):
+
+    return HttpResponse(
+        f"""
+        <h1>{name} - {number}</h1>
+        """
+    )
+
+data = {
+    1: {
+        'slug': '',
+        'title': '',
+    }
+}
+
+def pages(request, number, text):
+
+    return HttpResponse(
+        f"""
+        <h1>{number} - {text}</h1>
+        """
+    )
