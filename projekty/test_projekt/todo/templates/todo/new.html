@@ -13,6 +13,15 @@
     <div class="container">
       <h1 class="title">Create a new Item</h1>
       
+      <form method="POST" action="{% url 'todo:new' %}">
+        {% csrf_token %}
+        {{ form }}
+      <button type="submit">Uložit</button>
+      </form>
+
+      <hr>
+      <hr>
+      
       <form style="max-width: 640px;">
         <div class="field">
           <label class="label">Name</label>
