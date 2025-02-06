@@ -1,0 +1,15 @@
+pokračovat v todo app
+
+1. upravit ostatní stránky do vzhledu bulmy
+- + přidat linky pomocí url
+
+
+
+
+až pak:
+2. Práce s templates (include, extends)
+
+přidat modely
+
+
+3. ukazat moduly -> rozdělení kód na menší kousky

@@ -1,0 +1,12 @@
+
+Template language
+https://docs.djangoproject.com/en/5.1/ref/templates/language/
+
+Model fields
+https://docs.djangoproject.com/en/5.1/ref/models/fields/
+
+django manage.py
+https://docs.djangoproject.com/en/5.1/ref/django-admin/
+
+QuerySet
+https://docs.djangoproject.com/en/5.1/ref/models/querysets/
