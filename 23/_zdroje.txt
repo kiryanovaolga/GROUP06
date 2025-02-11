@@ -1,0 +1,8 @@
+Python stahování video nebo i jen zvuku
+https://pytube.io/en/latest/
+
+Django app pro autentifikaci (+ přes google, facebok a další provodery)
+https://docs.allauth.org/en/latest/
+
+Trochu pokročileší django tutorial
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website

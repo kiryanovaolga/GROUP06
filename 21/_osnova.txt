@@ -4,8 +4,6 @@ pokračovat v todo app
 - + přidat linky pomocí url
 
 
-
-
 až pak:
 2. Práce s templates (include, extends)
 

@@ -19,7 +19,7 @@
       <div class="columns is-multiline">
         {% for task in tasks %}
           <div class="column is-4">
-            <a style="display: block;" class="button" href="{% url 'todo:detail' number=task.id %}">
+            <a style="" class="button is-flex" href="{% url 'todo:detail' number=task.id %}">
               {{ task.title }}
             </a>
           </div>

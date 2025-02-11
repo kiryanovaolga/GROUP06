@@ -1,0 +1,79 @@
+Diskuze a zápis projektů
+
+- Předělat formulář
+
+- Přidat atributy do models
+- Přidat na detail formulář
+---------------------------------------------------------------
+
+Dan: Redakční systém pro výroční zprávu
+1 zpráva -> 10 kapitol -> X Článků
+- někdo to píše, někdo to schvaluje a dělá se export
+
+
+Dan D.: Databáze navštívených fotbalových zápasů
+- user1 - 10 zapisu 
+- user2 - 4 zápisy
+- Tým, zápas (Tym1, Tym2), výsledek,
+- poznamka
+
+
+Dima: Databáze filmů (+ recenze)
+- Film
+- Hodnocení
+- Herci
+
+
+Ivana: Webová stránka pro barber shop
+- rezervace
+- služba + cena (Kč)
+- tým (lidí)
+
+
+František: Kuryrní systém / Technická Obrázková Wiki
+- jednoduchá verze
+
+- uživatel (přímejmce, odesílatel, kurýr, řidič)
+- zásilka
+
+
+Olga: Rezervační systém
+- jednoduchá verze
+- služba, odborník, formulář -> kontakt
+- potvrzovací mail pro obě strany
+
+
+Petr: cestovní blok pro matorkáře
+- uživatel
+- článek, kategorie
+- komentář k článku
+- obrázky
+
+django-allauth
+
+
+Ahmed: eshop
+
+
+Kelly - Hudební přehrávač
+- user
+- 
+
+
+Katka: můj projekt - pracovní platforma
+
+
+
+Nikita
+Ja mam (AML scoring, popis a zacatek na GIT hubu
+
+
+
+HTTP - požadavek - odpověď 
+http://
+
+WebSocket
+ws://
+
+Já bych chtěl zkusit udělat aplikaci, ve které si uživatel může vytvořit svojí vlastní chatroom, nebo se připojit do existující. Uživatelé budou anonymní, ale pokud si budou rozumět, tak by měli možnost se přidat do přátel a vytvořit privátní chatroom. 
+ 

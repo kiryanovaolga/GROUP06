@@ -1,3 +1,4 @@
+from django import forms
 from django.forms import ModelForm
 from django.shortcuts import render, redirect
 from todo.models import Task
@@ -6,7 +7,12 @@ from todo.models import Task
 class TaskForm(ModelForm):
     class Meta:
         model = Task
-        fields = ['title', 'desc']
+        fields = ['title', 'desc'] # atributy z Task
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'input'}),
+            'desc': forms.Textarea(attrs={'class': 'textarea'}),
+        }
+
 
 
 def index(request):
@@ -19,6 +25,7 @@ def todo_list(request):
 def todo_new(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
+
         if form.is_valid():
             task = form.save()
             print(task, task.id)
