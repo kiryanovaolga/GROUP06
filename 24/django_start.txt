@@ -1,0 +1,25 @@
+způsoby založení django projektu
+
+1) "oficiální cesta"
+django-admin startproject nazev_projektu
+
+/nazev_projektu/
+    /nazev_projektu/ (nastavení projektu)
+    manage.py
+
+
+2) "můj způsob"
+založím si ručně nebo přes editor přes termínal
+/nazev_projektu/
+
+dostaneme se dovnitř složky co jsme založili
+cd nazev_projektu
+
+django-admin startproject _project .
+
+/nazev_projektu/
+    /_project/ (nastavení projektu)
+    manage.py
+
+
+
