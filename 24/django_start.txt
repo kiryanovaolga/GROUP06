@@ -16,6 +16,7 @@ dostaneme se dovnitř složky co jsme založili
 cd nazev_projektu
 
 django-admin startproject _project .
+(poznámka: je tam ka konci tečka)
 
 /nazev_projektu/
     /_project/ (nastavení projektu)

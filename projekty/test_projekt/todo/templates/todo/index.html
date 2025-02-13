@@ -7,18 +7,20 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     </head>
     <body>
-        <section class="hero is-fullheight">
-            <div class="hero-body">
-              <div class="container has-text-centered">
-                <h1 class="title">Awesome Todo App</h1>
-                <p class="subtitle">create &amp; manage your tasks</p>
+        {% include 'todo/includes/nav.html' %}
 
-                <div class="buttons are-medium is-centered">
-                    <a href="{% url 'login' %}" class="button is-warning">Login</a>
-                    <a href="#" class="button is-warning is-light">Register</a>
+        <section class="hero is-halfheight">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">Awesome Todo App</h1>
+                    <p class="subtitle">create &amp; manage your tasks</p>
+
+                    <div class="buttons are-medium is-centered">
+                        <a href="{% url 'login' %}" class="button is-warning">Login</a>
+                        <a href="#" class="button is-warning is-light">Register</a>
+                    </div>
                 </div>
-              </div>
             </div>
-          </section>
+        </section>
     </body>
 </html>
