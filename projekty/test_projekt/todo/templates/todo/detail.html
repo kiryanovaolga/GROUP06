@@ -9,13 +9,33 @@
   <body>
     {% include 'todo/includes/nav.html' %}
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">{{ task.title }}</h1>
-      <p class="subtitle">{{ task.desc }}</p>
-      <p class="subtitle">Last update: {{ task.update_dt }}</p>
+  <section class="section container" style="max-width: 640px;">
+    <h1 class="title">{{ task.title }}</h1>
+    <p class="subtitle is-size-6">
+      Last edit: <time datetime="{{ task.update_dt|date:'Y-m-d\TH:i' }}">{{ task.update_dt }}</time><br>
+      Finished at: <time datetime="{{ task.finish_dt|date:'Y-m-d\TH:i' }}">{{ task.finish_dt|default:'-' }}</time>
+    </p>
+    
+    
+    <form method="POST" action="{% url 'todo:detail' number=task.id %}">
+      {% csrf_token %}
 
-    </div>
+      {% load crispy_forms_tags %}
+      {{ form|crispy }}
+
+      <div class="buttons">
+          <button type="submit" class="button is-warning">Save</button>
+          <a href="{% url 'todo:list' %}" class="button is-warning is-light">Cancel</a>
+          <span style="flex-grow:1;"></span>
+          <a href="{% url 'todo:list' %}" class="button is-danger is-light">Delete</a>
+          {% if task.is_finished %}
+          <a href="#" class="button is-primary">Un-Finish</a>
+          {% else %}
+          <a href="#" class="button is-primary">Finish</a>
+          {% endif %}
+      </div>
+    </form>
   </section>
+
   </body>
 </html>

@@ -2,10 +2,15 @@
     <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <a class="navbar-item" href="{% url 'todo:index' %}">Home</a>
-                <a class="navbar-item" href="{% url 'todo:list' %}">List</a>
-                <a class="navbar-item" href="{% url 'todo:new' %}">New</a>
-                <a class="navbar-item" href="#">Hello</a>
+                {% url 'todo:index' as index_url %}
+                {% url 'todo:list' as list_url %}
+                {% url 'todo:new' as new_url %}
+
+                <a class="navbar-item {% if request.path == index_url %} has-text-weight-bold{% endif %}" href="{{ index_url }}">
+                    ✨ Awesome Todo
+                </a>
+                <a class="navbar-item {% if request.path == list_url %} has-text-weight-bold{% endif %}" href="{{ list_url }}">List</a>
+                <a class="navbar-item {% if request.path == new_url %} has-text-weight-bold{% endif %}" href="{{ new_url }}">New</a>
             
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>

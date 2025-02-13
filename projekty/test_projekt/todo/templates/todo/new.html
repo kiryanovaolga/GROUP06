@@ -9,64 +9,22 @@
   <body>
     {% include 'todo/includes/nav.html' %}
 
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Create a new Item</h1>
+<section class="section container" style="max-width: 640px;">
+  <h1 class="title">Create a new Item</h1>
+  
+  <form method="POST" action="{% url 'todo:new' %}">
+    {% csrf_token %}
 
-      {% comment %}
+    {% load crispy_forms_tags %}
+    {{ form|crispy }}
 
-      <form method="POST" action="{% url 'todo:new' %}">
-        {% csrf_token %}
+    <div class="buttons">
+        <button type="submit" class="button is-warning">Save</button>
+        <a href="{% url 'todo:list' %}" class="button is-warning is-light">Cancel</a>
         
-        {{ form }}
-        
-        
-        <div class="field is-grouped">
-          <div class="control">
-            <button type="submit" class="button is-link">Submit</button>
-          </div>
-          <div class="control">
-            <a href="{% url 'todo:list' %}" class="button is-link is-light">Zpět na seznam</a>
-          </div>
-        </div>
-
-      </form>
-
-      {% endcomment %}
-      
-      <form method="POST" action="{% url 'todo:new' %}" style="max-width: 640px;">
-        {% csrf_token %}
-        <div class="field">
-          <label class="label">{{ form.title.label }}</label>
-          <div class="control">
-            <input name="{{ form.title.name }}" value="{{ form.title.value }}" class="input" type="text" placeholder="">
-          </div>
-          {% if form.errors.title %}
-          <p class="help is-danger">{{ form.errors.title }}</p>
-          {% endif %}
-        </div>
-
-        <div class="field">
-          <label class="label">{{ form.desc.label }}</label>
-          <div class="control">
-            <textarea name="{{ form.desc.name }}" class="textarea" placeholder=""></textarea>
-          </div>
-          {% if form.errors.desc %}
-          <p class="help is-danger">{{ form.errors.desc }}</p>
-          {% endif %}
-        </div>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <button type="submit" class="button is-link">Submit</button>
-          </div>
-          <div class="control">
-            <a href="{% url 'todo:list' %}" class="button is-link is-light">Zpět na seznam</a>
-          </div>
-        </div>
-      </form>
-
     </div>
-  </section>
+  </form>
+</section>
+
   </body>
 </html>
