@@ -6,6 +6,7 @@ urlpatterns = [
     path('test/', include('myapp.urls')),
     path('admin/', admin.site.urls),
     path('todo/', include('todo.urls', namespace='todo')),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
 
 # action = "/vypocitej/"
