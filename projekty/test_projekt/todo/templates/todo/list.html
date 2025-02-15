@@ -65,7 +65,10 @@
               <a href="{% url 'todo:detail' number=task.id %}">{{ task.title }}</a>
               <br>
               {% if task.dead_line_dt %}
-              <time datetime="{{ task.dead_line_dt|date:'Y-m-d\TH:i' }}">{{ task.dead_line_dt }}</time>
+              <time datetime="{{ task.dead_line_dt|date:'Y-m-d\TH:i' }}">
+                {% if not task.is_finished and task.dead_line_dt|date:"Y-m-d" <= dt_now|date:"Y-m-d" %}❗{% endif %}
+                {{ task.dead_line_dt }}
+              </time>
               {% endif %}
               
             </div>

@@ -1,3 +1,4 @@
+import datetime as dt
 from django.shortcuts import (
     render,
     redirect,
@@ -20,7 +21,7 @@ def todo_list(request):
             tasks = tasks.filter(is_finished=True)
 
         tasks = tasks.order_by('-id')[0:100]
-        return render(request, 'todo/list.html', {'tasks': tasks})
+        return render(request, 'todo/list.html', {'tasks': tasks, 'dt_now': dt.datetime.now()})
     else:
         return redirect('/todo/')
 
