@@ -8,7 +8,7 @@ django-admin startproject nazev_projektu
     manage.py
 
 
-2) "můj způsob"
+2) "lepší způsob"
 založím si ručně nebo přes editor přes termínal
 /nazev_projektu/
 

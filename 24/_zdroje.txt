@@ -1,0 +1,3 @@
+OOP vztahy mezi objekty (třídami)
+
+https://www.umlboard.com/docs/relations/
