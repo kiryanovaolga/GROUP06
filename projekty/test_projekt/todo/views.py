@@ -15,6 +15,7 @@ def index(request):
 def todo_list(request):
     if request.user.is_authenticated:
         tasks = Task.objects.filter(user=request.user)
+        # ?active
         if 'active' in request.GET:
             tasks = tasks.filter(is_finished=False)
         elif 'finished' in request.GET:
@@ -46,17 +47,23 @@ def todo_detail(request, number):
     return redirect('/todo/')
 
 def todo_new(request):
-    if request.method == 'POST':
-        form = TaskForm(request.POST)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = TaskForm(request.POST)
 
-        if form.is_valid():
-            task = form.save()
-            print(task, task.id)
-            return redirect('/todo/list/') # todo: opravit
+            if form.is_valid():
+                task = form.save(commit=False)
+                task.user = request.user
+                task.save()
+
+                print(task, task.id)
+                return redirect('/todo/list/') # todo: opravit
+        else:
+            form = TaskForm()
+
+        return render(request, 'todo/new.html', {'form': form})
     else:
-        form = TaskForm()
-
-    return render(request, 'todo/new.html', {'form': form})
+        return redirect('/todo/')
     
     
 
