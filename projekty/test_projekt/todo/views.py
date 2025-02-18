@@ -64,6 +64,54 @@ def todo_new(request):
         return render(request, 'todo/new.html', {'form': form})
     else:
         return redirect('/todo/')
-    
-    
+ 
+# /todo/232789/delete/
+def todo_task_delete(request, number):
+    """
+    1. najdeme ho
+        a) podle number id=number
+        b) user musí přihlašení
+        c) task musí patřit uživateli
+    2. smažeme ho 
+    3. zobrazit list
+    """
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            task = get_object_or_404(Task, id=number, user=request.user)
+            task.delete()
+            return redirect('/todo/list/')
 
+    return redirect('/todo/')
+
+
+def todo_task_finish(request, number):
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            task = get_object_or_404(Task, id=number, user=request.user)
+
+            task.is_finished = not task.is_finished
+
+            """
+            if task.is_finished:
+                task.is_finished = False
+            else:
+                task.is_finished = True
+            """
+            
+            task.save(update_fields=['is_finished'])
+            return redirect('/todo/list/')
+
+    return redirect('/todo/')
+
+"""
+1. definovat url cestu
+
+2. definovat view
+získame si task stejně jako u delete
+task.is_finished = True
+task.save()
+
+3. přidat form do template
+
+
+"""
