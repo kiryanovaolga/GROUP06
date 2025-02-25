@@ -128,4 +128,4 @@ LOGIN_REDIRECT_URL = '/todo/list/'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bulma"
 CRISPY_TEMPLATE_PACK = "bulma"
 
-AUTH_USER_MODEL = 'myapp.models.User'
+# AUTH_USER_MODEL = 'myapp.models.User'

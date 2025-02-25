@@ -70,6 +70,8 @@ class Zamestnanec:
 
 #-------------------------------------------------------------------------------
 # jak customizovat User model
+# pak je potřeba přidat ještě do settings
+# AUTH_USER_MODEL = 'moje_app.models.User' # za moje app dáte název vaší app
 #-------------------------------------------------------------------------------
 
 from django.contrib.auth.models import AbstractUser
@@ -79,6 +81,13 @@ class Services(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
 
 class User(AbstractUser):
+    # toto vytvoří vlastní user model (bude mít vše co původní user model)
+    # s přidanými atributy, tady např: is_specialist, services
     is_specialist = models.BooleanField(default=False)
-
     services = models.ManyToManyField(Services, blank=True)
+
+# více zde:
+# jsou 2 zůsoby jak rozšířit model:
+# 1) 1:1 vazba na profile (viz odkaz)
+# 2) dedičnost (viz kod nahoře + odkaz)
+# https://docs.djangoproject.com/en/5.1/topics/auth/customizing/#extending-the-existing-user-model
