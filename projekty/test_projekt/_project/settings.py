@@ -127,3 +127,5 @@ LOGIN_REDIRECT_URL = '/todo/list/'
 # python -m pip install django-crispy-forms crispy-bulma
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bulma"
 CRISPY_TEMPLATE_PACK = "bulma"
+
+AUTH_USER_MODEL = 'myapp.models.User'
